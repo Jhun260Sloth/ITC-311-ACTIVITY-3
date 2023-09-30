@@ -28,3 +28,5 @@
 
 </body>
 </html>
+
+data-toggle="modal" data-target="#myModal"
