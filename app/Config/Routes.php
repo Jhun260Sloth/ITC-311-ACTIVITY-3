@@ -13,7 +13,7 @@ $routes->get('/prod/(:any)', 'ShopController::prod/$1');
 
 $routes->get('/Login', 'ShopController::Login');
 
-$routes->get('/Admin', 'ShopController::Admin');
+$routes->get('/Admin', 'ShopController::Admin', authGuard' => \App\Filters AuthGuard::class);
 
 $routes->get('/Shop', 'ShopController::Shop');
 
