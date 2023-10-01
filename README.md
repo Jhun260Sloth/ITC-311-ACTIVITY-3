@@ -1,62 +1,25 @@
-# CodeIgniter 4 Application Starter
+# Laboratory 3 ITC-311
 
-## What is CodeIgniter?
+## Sock Eccommerce Website (90% done)
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+Homepage
+![image](https://github.com/Jhun260Sloth/ITC-311-ACTIVITY-3/assets/99332717/f1e62819-d7f6-4f01-94c4-e25859b2da77)
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+Shop
+![image](https://github.com/Jhun260Sloth/ITC-311-ACTIVITY-3/assets/99332717/56b00e0b-5f3f-405f-8cf3-8e27171c262a)
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+Shop_1
+![image](https://github.com/Jhun260Sloth/ITC-311-ACTIVITY-3/assets/99332717/ff2a89ed-7895-487b-b2cd-eedf995b39e5)
 
-The user guide corresponding to the latest version of the framework can be found
-[here](https://codeigniter4.github.io/userguide/).
+Shop(View Product)
+![image](https://github.com/Jhun260Sloth/ITC-311-ACTIVITY-3/assets/99332717/0b0674f1-dcf1-4dcf-b7a9-5649029148e6)
 
-## Installation & updates
+Admin Panel (CRUD)
+![image](https://github.com/Jhun260Sloth/ITC-311-ACTIVITY-3/assets/99332717/72489ff6-fce7-485c-ab04-ce9e313e099e)
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+Edit using Modal
+![image](https://github.com/Jhun260Sloth/ITC-311-ACTIVITY-3/assets/99332717/93d25f35-962f-4b90-b639-8e931df11c15)
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
 
-## Setup
-
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
-
-## Important Change with index.php
-
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
-
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
-
-**Please** read the user guide for a better explanation of how CI4 works!
-
-## Repository Management
-
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
-
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
-
-## Server Requirements
-
-PHP version 7.4 or higher is required, with the following extensions installed:
-
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+### De Jesus Jhunnel O.
+### 3-F1
