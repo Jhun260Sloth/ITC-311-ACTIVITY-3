@@ -19,3 +19,7 @@ Admin Panel (CRUD)
 
 Edit using Modal
 ![image](https://github.com/Jhun260Sloth/ITC-311-ACTIVITY-3/assets/99332717/93d25f35-962f-4b90-b639-8e931df11c15)
+
+
+### De Jesus Jhunnel O.
+### 3-F1
