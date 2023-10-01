@@ -10,16 +10,9 @@
 <?= $this->include('shopsrc/body') ?>
 
 
-<br>
-<br>
-<br>
-<br>
-
 <?= $this->include('adminfold/adminbody') ?>
 
 <?= $this->include('adminfold/admintable') ?>
-
-<?= $this->include('adminfold/modal') ?>
 
 <?= $this->include('adminfold/adminfoot') ?>
 

@@ -25,10 +25,10 @@ class ShopController extends BaseController
 
         if ($image->isValid() && !$image->hasMoved())
         {
-          
             $image->move(ROOTPATH . 'public/images');
-
             $imageName = '/images/' . $image->getName();
+
+            $id = isset($_POST['id']) ? $_POST['id'] : null;
 
             $data = [
                 'name' => $this->request->getVar('name'),
@@ -39,20 +39,18 @@ class ShopController extends BaseController
                 'quantity' => $this->request->getVar('quantity'),
             ];
 
-
-        if ($id!= null) {
-            $this->activity->set($data)->where('id', $id)->update();
-        } 
-
-        else 
-        {
-            $this->prod->insert($data);
-        }
+            if ($id !== null) 
+            {
+                $this->prod->set($data)->where('id', $id)->update();
+                 return redirect()->to('/Admin');
+            } 
+            else 
+            {
+                $this->prod->save($data);
+            }
 
             return redirect()->to('/Admin');
         }
-
-
         else
         {
             return redirect()->back()->with('error', 'Image upload failed.');
@@ -60,16 +58,18 @@ class ShopController extends BaseController
     }
 
 
+
     public function Shop()
     {
-        return view('Shop');
+        $data['prod'] = $this->prod->findAll();
+        return view('Shop', $data);
     }
 
 
 
     public function Login()
     {
-         return view('Login');
+         return view('login');
     }
 
 
@@ -93,8 +93,18 @@ class ShopController extends BaseController
     {
             $data = [
                 'prod' => $this->prod->findAll(),
-                'dat' => $this->prod->where('id', $id)->first(),
+                'datz' => $this->prod->where('id', $id)->first(),
             ];
             return view('update', $data);
+    }
+
+
+    public function info($id)
+    {
+            $data = [
+                'prod' => $this->prod->findAll(),
+                'inf' => $this->prod->where('id', $id)->first(),
+            ];
+            return view('infoitem', $data);
     }
 }

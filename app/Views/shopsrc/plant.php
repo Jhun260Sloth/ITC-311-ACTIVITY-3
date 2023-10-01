@@ -14,49 +14,28 @@
          <div class="clothes_main section ">
           <div class="container">
             <div class="row">
+
+            <?php foreach ($prod as $us): ?>
                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                  <div class="sport_product">
-                     <figure><img src="images/basketball.png" alt="img"/></figure>
-                    <h3> $<strong class="price_text">50</strong></h3>
-                     <h4>basket ball</h4>
+                  <div class="sport_product" style="border-radius: 10px">
+
+                     <figure>
+                    <img src="<?= $us['image'] ?>" alt="img" style="width: 300px; height: 200px; border-radius: 10px;" />
+                  </figure>
+
+                     <br>
+
+                     <h4><?= $us['name'] ?></h4>
+
+                    <h3> $<strong class="price_text"> <?= $us['price'] ?> </strong></h3>
+                     <h5>Quantity: <?= $us['quantity'] ?> </h5>
+                     <br>
+                     <a href="/info/<?= $us['id']?>" class="btn btn-primary">View</a>
                   </div>
+
                </div>
-               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 ">
-                  <div class="sport_product">
-                     <figure><img src="images/t-shirt.png" alt="img"/ ></figure>
-                    <h3> $<strong class="price_text">50</strong></h3>
-                     <h4> T-Shirt</h4>
-                  </div>
-               </div>
-               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 ">
-                  <div class="sport_product">
-                     <figure><img src="images/game.png" alt="img"/></figure>
-                     <h3> $<strong class="price_text">50</strong></h3>
-                     <h4>Game</h4>
-                  </div>
-               </div>
-         
-               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                  <div class="sport_product">
-                     <figure><img src="images/basketball.png" alt="img"/"></figure>
-                   <h3> $<strong class="price_text">50</strong></h3>
-                     <h4>basket ball</h4>
-                  </div>
-               </div>
-               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 ">
-                  <div class="sport_product">
-                     <figure><img src="images/t-shirt.png" alt="img"/"></figure>
-                    <h3> $<strong class="price_text">50</strong></h3>
-                     <h4>T-Shirt</h4>
-                  </div>
-               </div>
-               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 ">
-                  <div class="sport_product">
-                     <figure><img src="images/game.png" alt="img"/"></figure>
-                    <h3> $<strong class="price_text">50</strong></h3>
-                     <h4>Game</h4>
-                  </div>
-               </div>
+            <?php endforeach; ?>
+
              </div>
             </div>
            </div>

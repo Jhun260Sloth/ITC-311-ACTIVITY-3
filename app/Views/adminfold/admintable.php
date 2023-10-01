@@ -27,7 +27,7 @@
                         <td>
                             <a href="/edit/<?= $us['id']?>" class="btn btn-warning">Edit</a>
                             <a href="/delete/<?= $us['id']?>" class="btn btn-danger">Delete</a>
-                        </td>
+                        </td>  
                     </tr>
                 <?php endforeach; ?>
             </tbody>
