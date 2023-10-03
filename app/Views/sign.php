@@ -29,6 +29,9 @@
                 </div>
                 <div class="d-grid">
                     <button type="submit" class="btn btn-dark">Signup</button>
+                    <br>
+                    <p>Already have an account?<p>
+                    <button href="/Login"  class="btn btn-success">Login</button>
                 </div>
             </form>
         </div>

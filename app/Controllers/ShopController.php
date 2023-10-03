@@ -72,6 +72,11 @@ class ShopController extends BaseController
          return view('Login');
     }
 
+     public function Register()
+    {
+         return view('sign');
+    }
+
 
 
     public function Admin()

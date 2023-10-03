@@ -25,6 +25,10 @@
                 </div>
                 <div class="d-grid">
                     <button type="submit" class="btn btn-success">Signin</button>
+                    <br>
+                      <p>Dont have an account?<p>
+                    <button href="/Register" class="btn btn-success">Register</button>
+
                 </div>
             </form>
         </div>
