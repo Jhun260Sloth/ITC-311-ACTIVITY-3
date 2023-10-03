@@ -69,7 +69,7 @@ class ShopController extends BaseController
 
     public function Login()
     {
-         return view('login');
+         return view('Login');
     }
 
 

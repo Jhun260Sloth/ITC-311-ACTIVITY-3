@@ -13,7 +13,9 @@ $routes->get('/prod/(:any)', 'ShopController::prod/$1');
 
 $routes->get('/Login', 'ShopController::Login');
 
-$routes->get('/Admin', 'ShopController::Admin', authGuard' => \App\Filters AuthGuard::class);
+$routes->get('/Register', 'ShopController::Register');
+
+$routes->get('/Admin', 'ShopController::Admin', ['filter' => 'authGuard']);
 
 $routes->get('/Shop', 'ShopController::Shop');
 

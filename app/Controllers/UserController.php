@@ -2,29 +2,22 @@
 
 namespace App\Controllers;
 
-use App\Controllers\BaseController;
+use CodeIgniter\Controller;
+use App\Models\UserModel;
 
-class UserController extends BaseController
+class AuthController extends BaseController
 {
-
-    public function index()
-    {
-        //
-    }
-
     public function register()
     {
-
         helper(['form']);
 
         $rules = [
-            'username' => 'required|min_length[4]|max_length[100]|valid_email|is_unique[users.email]',
+            'username' => 'required|min_length[4]|max_length[100]|valid_email|is_unique[users.username]',
             'password' => 'required|min_length[4]|max_length[50]',
             'confirmpassword' => 'matches[password]'
         ];
 
         if ($this->validate($rules)) {
-            // Validation successful, proceed to save the user data
             $userModel = new UserModel();
 
             $data = [
@@ -32,55 +25,40 @@ class UserController extends BaseController
                 'password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT)
             ];
 
-            $userModel->insert($data); 
+            $userModel->insert($data);
 
-            return redirect()->to('/signin');
+            return redirect()->to('/Login');
         } else {
-            $data['validation'] = $this->validator;
-            echo view('signup', $data);
+            return view('sign');
         }
-
     }
 
 
-    public function LoginAuth()
+    public function login()
     {
-        $session = session();
+        helper(['form']);
 
-        $userModel = new UserModel();
+        $rules = [
+            'username' => 'required',
+            'password' => 'required'
+        ];
 
-        $username = $this->request->getVar('username');
-        $password = $this->request->getVar('password');
+        if ($this->validate($rules)) {
+            $userModel = new UserModel();
 
-        $data = $userModel->where('username', $username)->first();
+            $username = $this->request->getVar('username');
+            $password = $this->request->getVar('password');
 
-        if ($data) {
-            
-            $hashedPassword = $data['password'];
-            $isPasswordCorrect = password_verify($password, $hashedPassword);
+            $user = $userModel->where('username', $username)->first();
 
-            if ($isPasswordCorrect) {
-              
-                $ses_data = [
-                    'id' => $data['id'],
-                    'username' => $data['username'],
-                    'isLoggedIn' => TRUE
-                ];
-                $session->set($ses_data);
+            if ($user && password_verify($password, $user['password'])) {
 
-                return redirect()->to('/profile');
+                return redirect()->to('/Admin');
             } else {
-               
-                $session->setFlashdata('msg', 'Password is incorrect.');
-                return redirect()->to('/signin');
+                return redirect()->to('/Login')->with('error', 'Invalid username or password');
             }
         } else {
-
-            $session->setFlashdata('msg', 'Username does not exist.');
-            return redirect()->to('/signin');
+            return view('Login');
         }
-            }
-
-
-
+    }
 }
