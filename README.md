@@ -6,10 +6,10 @@ Homepage
 ![image](https://github.com/Jhun260Sloth/ITC-311-ACTIVITY-3/assets/99332717/f1e62819-d7f6-4f01-94c4-e25859b2da77)
 
 Register
-![image](https://github.com/Jhun260Sloth/ITC-311-ACTIVITY-3/assets/99332717/69c3b9b3-b207-4b18-92a3-3f48db709ed6)
+![image](https://github.com/Jhun260Sloth/ITC-311-ACTIVITY-3/assets/99332717/af2920fa-39c3-41dd-b4b9-751ce5611cf5)
 
 Login
-![image](https://github.com/Jhun260Sloth/ITC-311-ACTIVITY-3/assets/99332717/58dab626-a1af-4794-a08e-9d1e08aa6329)
+![image](https://github.com/Jhun260Sloth/ITC-311-ACTIVITY-3/assets/99332717/54b7e753-39f7-43c4-9e60-6e49111d8215)
 
 Shop
 ![image](https://github.com/Jhun260Sloth/ITC-311-ACTIVITY-3/assets/99332717/56b00e0b-5f3f-405f-8cf3-8e27171c262a)
